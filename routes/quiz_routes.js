@@ -1,4 +1,8 @@
 import express from "express";
+// import bodyParser from "body-parser";
+// import session from "express-session";
+// import pgPromise from "pg-promise";
+// import WaitersRoutes from "./routes/waitersRoutes.js";
 
 const app = express();
 
