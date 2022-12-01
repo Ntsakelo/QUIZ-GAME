@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         questions: data,
       });
       const option = document.querySelectorAll(".option");
-      console.log(option);
       let set = 0;
       for (let i = 0; i < option.length; i++) {
         if (i % 4 === 0) {
@@ -51,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
   submitBtn.addEventListener("click", function () {
     let image = typeName.innerHTML;
     const answers = document.querySelectorAll(".option");
-    console.log(answers);
     // axios
     //   .post("/api/quiz/results", {
     //     answer1,

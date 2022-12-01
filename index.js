@@ -9,8 +9,9 @@ import QuizData from "./database.js";
 
 const pgp = pgPromise();
 
-const DATABASE_URL =
-  process.env.DATABASE_URL || "postgresql://coder:pg123@localhost:5432/quiz";
+const DATABASE_URL= process.env.DATABASE_URL || "postgresql://postgres:pg123@localhost:5432/quiz";
+// const DATABASE_URL =
+//   process.env.DATABASE_URL || "postgresql://coder:pg123@localhost:5432/quiz";
 const config = {
   connectionString: DATABASE_URL,
 };
