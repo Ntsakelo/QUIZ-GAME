@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.querySelector(".the_game");
   const questionTemplate = document.querySelector(".questionTemplate");
   const questionDisplay = document.querySelector(".multiple_choice");
+  const submitBtn = document.querySelector(".submit_quiz");
+
   typeName.innerHTML = "";
   description.innerHTML = "";
   showDescription.addEventListener("click", function () {
@@ -30,11 +32,39 @@ document.addEventListener("DOMContentLoaded", function () {
     axios.get(`/api/quiz/play/image/${typeName.innerHTML}`).then((results) => {
       let response = results.data;
       let data = response.data;
-      console.log(data);
+
       let template = Handlebars.compile(questionTemplate.innerHTML);
       questionDisplay.innerHTML = template({
         questions: data,
       });
+      const option = document.querySelectorAll(".option");
+      console.log(option);
+      let set = 0;
+      for (let i = 0; i < option.length; i++) {
+        if (i % 4 === 0) {
+          set++;
+        }
+        option[i].setAttribute("name", `${set}`);
+      }
     });
+  });
+  submitBtn.addEventListener("click", function () {
+    let image = typeName.innerHTML;
+    const answers = document.querySelectorAll(".option");
+    console.log(answers);
+    // axios
+    //   .post("/api/quiz/results", {
+    //     answer1,
+    //     answer2,
+    //     answer3,
+    //     answer4,
+    //     username,
+    //     image,
+    //   })
+    //   .then((results) => {
+    //     let response = results.data;
+    //     let data = response.data;
+    //     console.log(data);
+    //   });
   });
 });

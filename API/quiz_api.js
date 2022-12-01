@@ -51,7 +51,7 @@ export default function (QuizData) {
       let image = req.params.image;
       let username = req.session.user;
 
-      let results = submitQuiz(
+      let results = await QuizData.submitQuiz(
         answer1,
         answer2,
         answer3,

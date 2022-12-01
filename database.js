@@ -41,6 +41,7 @@ export default function QuizData(db) {
         [imageId.id, level]
       );
       let itemList = [];
+      let set = 1;
       for (let i = 0; i < results.length; i++) {
         let optArr = [];
         let quizObj = {};
@@ -53,6 +54,8 @@ export default function QuizData(db) {
         });
         quizObj["question"] = results[i].question;
         quizObj["options"] = optArr;
+        quizObj["set"] = set;
+        set++;
         itemList.push(quizObj);
       }
       return itemList;
