@@ -1,0 +1,274 @@
+body {
+  font-family: Comic sans MS;
+  background-image: url("https://images.pexels.com/photos/5428829/pexels-photo-5428829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  margin: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#quizQuest {
+  font-family: Comic sans MS;
+  background-image: url("https://images.pexels.com/photos/5428829/pexels-photo-5428829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  margin: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+}
+/*---------- First Section(Enter Name) ------------*/
+.app_name {
+  background-color: rgba(150, 112, 91, 0.5);
+  color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+.enter_name {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 150px;
+  background-color: rgba(88, 81, 35, 0.6);
+  padding-bottom: 0px;
+  width: fit-content;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.name-header {
+  background-color: rgba(150, 112, 91, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+.game_player {
+  padding-bottom: 20px;
+}
+.the_game_player {
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: Comic sans MS;
+}
+.to_game {
+  padding: 40px;
+}
+.the_game {
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Comic sans MS;
+}
+.the_game:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 7px #e5e5e5;
+}
+
+/*---------- Start Camera Section ------------*/
+.camera_container {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.display_camera {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 20%;
+  border-radius: 60px;
+}
+.image_description {
+  background-color: rgba(88, 81, 35, 0.6);
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  width: 70%;
+  border-radius: 15px;
+}
+.desciption_type {
+  padding-top: 10px;
+}
+.description_paragraph {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.show_the_descr {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Comic sans MS;
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.show_the_descr:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 7px #e5e5e5;
+}
+.start_the_quiz:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 7px #e5e5e5;
+}
+.start_the_camera:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 7px #e5e5e5;
+}
+.start_the_quiz {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Comic sans MS;
+}
+.start_the_camera {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Comic sans MS;
+}
+.start_camera {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+.start_quiz {
+  text-align: center;
+}
+
+/*---------- Quiz Section ------------*/
+
+.timer_container {
+  background-color: rgba(150, 112, 91, 0.8);
+  color: #ffffff;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.multiple_choice {
+  color: #ffffff;
+  background-color: rgba(88, 81, 35, 0.6);
+  width: 70%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+.timer_text {
+  text-align: center;
+}
+.the_question {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+}
+.question {
+  padding-top: 5px;
+}
+.choices {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+.submit_the_quiz:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 7px #e5e5e5;
+}
+.submit_the_quiz {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Comic sans MS;
+}
+.submit_quiz {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+/*---------- Feedback Section ------------*/
+.score_container {
+  background-color: rgba(150, 112, 91, 0.8);
+  color: #ffffff;
+  width: 220px;
+  height: 220px;
+  line-height: 220px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.score_text {
+  text-align: center;
+  font-size: 30px;
+  padding: 5px;
+}
+.feedback_choice {
+  color: #ffffff;
+  background-color: rgba(88, 81, 35, 0.6);
+  width: 70%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+.answered_question {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.the_answered_question {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+}
+.continue_the_quiz {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Comic sans MS;
+}
+.continue_the_quiz:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 7px #e5e5e5;
+}
+.continue_quiz {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+.the_new_image {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Comic sans MS;
+}
+.the_new_image:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 7px #e5e5e5;
+}
+.new_image {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
