@@ -7,13 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const questionTemplate = document.querySelector(".questionTemplate");
   const questionDisplay = document.querySelector(".multiple_choice");
   const submitBtn = document.querySelector(".submit_quiz");
+  const resultsTemplate = document.querySelector(".resultsTemplate");
+  const resultsDisplay = document.querySelector(".feedback_choice");
 
   typeName.innerHTML = "";
   description.innerHTML = "";
+  let user = "";
   showDescription.addEventListener("click", function () {
     if (typeName.innerHTML !== "") {
       let type = typeName.innerHTML;
-      axios.get(`/api/quiz/image/${type}`).then((results) => {
+      axios.get(`/api/quiz/image/${typeName.innerHTML}`).then((results) => {
         let response = results.data;
         let data = response.data;
         description.innerHTML = data.image_description;
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nextBtn.addEventListener("click", function () {
     const playerName = document.querySelector(".the_game_player");
     let player = playerName.value;
-
+    user = player;
     axios.post("/api/quiz/user", { player }).then(function () {
       return;
     });
@@ -50,21 +53,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   submitBtn.addEventListener("click", function () {
     let image = typeName.innerHTML;
+
     const answers = document.querySelectorAll(".option");
-    console.log(answers);
-    // axios
-    //   .post("/api/quiz/results", {
-    //     answer1,
-    //     answer2,
-    //     answer3,
-    //     answer4,
-    //     username,
-    //     image,
-    //   })
-    //   .then((results) => {
-    //     let response = results.data;
-    //     let data = response.data;
-    //     console.log(data);
-    //   });
+    let responseList = [];
+    for (let i = 0; i < answers.length; i++) {
+      let answer = answers[i];
+      if (answer.checked) {
+        responseList.push(answer.value);
+      }
+    }
+    let answer1 = responseList[0];
+    let answer2 = responseList[1];
+    let answer3 = responseList[2];
+    let answer4 = responseList[3];
+
+    axios
+      .post("/api/quiz/results", {
+        answer1,
+        answer2,
+        answer3,
+        answer4,
+        user,
+        image,
+      })
+      .then((results) => {
+        let response = results.data;
+        let data = response.data;
+        let score = 0;
+        data.forEach((item) => {
+          score += item.score;
+        });
+        template = Handlebars.compile(resultsTemplate.innerHTML);
+        resultsDisplay.innerHTML = template({
+          feedback: data,
+          theScore: score,
+        });
+      });
   });
 });

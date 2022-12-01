@@ -79,6 +79,7 @@ export default function QuizData(db) {
         "select id from images where image_name =$1",
         [image]
       );
+
       for (let i = 0; i < responseLst.length; i++) {
         let stateObj = {};
         let item = responseLst[i];
@@ -86,16 +87,17 @@ export default function QuizData(db) {
           "select quiz.id,question,option,status,score from options join quiz on options.question_id = quiz.id where option = $1 and image_id = $2",
           [item, result.id]
         );
-
         score += results.score;
-        await db.none(
-          "update table users set score = score + $1 where first_name = $2",
-          [score, username]
-        );
-        if (stateObj[`question${results.id}`] === undefined) {
-          stateObj[`question${results.id}`] = results.question;
+        await db.none("update users set score = $1 where first_name = $2", [
+          score,
+          username,
+        ]);
+
+        if (stateObj[`question`] === undefined) {
+          stateObj[`question`] = results.question;
           stateObj["option"] = responseLst[i];
           stateObj["state"] = results.status;
+          stateObj["score"] = results.score;
         }
         stateList.push(stateObj);
       }

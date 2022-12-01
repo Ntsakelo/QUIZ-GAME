@@ -47,9 +47,9 @@ export default function (QuizData) {
       let answer1 = req.body.answer1;
       let answer2 = req.body.answer2;
       let answer3 = req.body.answer3;
-      let answer4 = req.body.answer;
-      let image = req.params.image;
-      let username = req.session.user;
+      let answer4 = req.body.answer4;
+      let image = req.body.image;
+      let username = req.body.user;
 
       let results = await QuizData.submitQuiz(
         answer1,
@@ -59,6 +59,7 @@ export default function (QuizData) {
         username,
         image
       );
+
       res.json({
         status: "success",
         data: results,

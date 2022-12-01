@@ -30,8 +30,6 @@ Botswana, and sukuma wiki in Kenya.
 Muriwo is an extremely nutrient-rich vegetable. It packs high amounts
 of carotenoids, vitamin C, vitamin K, folic acid, iron, and calcium.');
 
--- 
--- (Tomatoes level 1)
 insert into quiz(image_id,question,level) values(1,'Tomatoes reduce the risk of?',1);
 
 insert into quiz(image_id,question,level) values(1,'Tomatoes are a great source of?',1);
@@ -40,23 +38,23 @@ insert into quiz(image_id,question,level) values(1,'The color of a mature tomato
 
 insert into quiz(image_id,question,level) values(1,'Tomatoes are mostly made up of
 ',1);
--- (Oranges level 1) 
+ 
 insert into quiz(image_id,question,level) values(2,'Oranges grow on?',1);
 insert into quiz(image_id,question,level) values(2,'Their origin is?',1);
 insert into quiz(image_id,question,level) values(2,'Oranges are a good source of fibre',1);
 insert into quiz(image_id,question,level) values(2,'Oranges are high in?',1);
--- (Moringa level 1)
+
 insert into quiz(image_id,question,level) values(3,'Moringa can be grown cheaply',1);
 insert into quiz(image_id,question,level) values(3,'To retain much of its nutrients Moringa should be?',1);
 insert into quiz(image_id,question,level) values(3,'Before taking Moringa one should consult a?',1);
 insert into quiz(image_id,question,level) values(3,'Moringa Is used for',1);
--- (Muriwo level 2)
+
 insert into quiz(image_id,question,level) values(4,'In Zimbabwe greeny leafy vegetables are know as?',1);
 insert into quiz(image_id,question,level) values(4,'Muriwo is served with?',1);
 insert into quiz(image_id,question,level) values(4,'Muriwo packs amounts of',1);
 insert into quiz(image_id,question,level) values(4,'Muriwo does not have',1);
 
---
+
 insert into options(question_id,option,status,score) values(1,'heart disease','correct',25);
 insert into options(question_id,option,status,score) values(1,'tooth ache','incorrect',0);
 insert into options(question_id,option,status,score) values(1,'head ache','incorrect',0);
@@ -89,7 +87,7 @@ insert into options(question_id,option,status,score) values(6,'China','correct',
 
 insert into options(question_id,option,status,score) values(7,'true','correct',25);
 insert into options(question_id,option,status,score) values(7,'false','incorrect',0);
-insert into options(question_id,option,status,score) values(7,'not enough information','incorrect',0);
+insert into options(question_id,option,status,score) values(7,'provide enough information','incorrect',0);
 insert into options(question_id,option,status,score) values(7,'they are a good source of vitamin d','incorrect',0);
 
 insert into options(question_id,option,status,score) values(8,'vitamin d','incorrect',0);
@@ -99,7 +97,7 @@ insert into options(question_id,option,status,score) values(8,'oxygen','incorrec
 
 insert into options(question_id,option,status,score) values(9,'true','correct',25);
 insert into options(question_id,option,status,score) values(9,'false','incorrect',0);
-insert into options(question_id,option,status,score) values(9,'not enough information','incorrect',0);
+insert into options(question_id,option,status,score) values(9,'not enough information provided','incorrect',0);
 insert into options(question_id,option,status,score) values(9,'they are expensive to grow','incorrect',0);
 
 insert into options(question_id,option,status,score) values(10,'boiled','incorrect',0);
@@ -127,7 +125,7 @@ insert into options(question_id,option,status,score) values(14,'burger','incorre
 insert into options(question_id,option,status,score) values(14,'any sub-saharan african meal','correct',25);
 insert into options(question_id,option,status,score) values(14,'amasi','incorrect',0);
 
-insert into options(question_id,option,status,score) values(15,'folic','correct',25);
+insert into options(question_id,option,status,score) values(15,'juice','correct',25);
 insert into options(question_id,option,status,score) values(15,'water','incorrect',0);
 insert into options(question_id,option,status,score) values(15,'not enough information','incorrect',0);
 insert into options(question_id,option,status,score) values(15,'milk','incorrect',0);

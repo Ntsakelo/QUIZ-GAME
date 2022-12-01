@@ -17,7 +17,6 @@
     <title>QUIZ GAME</title>
   </head>
   <body>
-    
     <!-- 22222 -->
     <!-- Full screen modal -->
     <div class="app_name">
@@ -56,7 +55,6 @@
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
           <div class="modal-body" id="quizQuest">
-
             <div class="camera_container">
               <!-- <img
                 src="https://images.pexels.com/photos/1291515/pexels-photo-1291515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -74,7 +72,8 @@
                 // More API functions here:
                 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
                 // the link to your model provided by Teachable Machine export panel
-                const URL = "https://teachablemachine.withgoogle.com/models/LFuzZztRi/";
+                const URL =
+                  "https://teachablemachine.withgoogle.com/models/LFuzZztRi/";
                 let model, webcam, labelContainer, maxPredictions;
                 // Load the image model and setup the webcam
                 async function init() {
@@ -112,9 +111,9 @@
                   // predict can take in an image, video or canvas html element
                   const prediction = await model.predict(webcam.canvas);
                   const typeName = document.querySelector(".typeName");
-        
+
                   //   console.log(prediction);
-        
+
                   //   const tomatoData = prediction[0]
                   //   const carrotData = prediction[1];
                   //   const orangeData = prediction[2];
@@ -125,7 +124,7 @@
                       typeName.innerHTML = item.className;
                     }
                   });
-        
+
                   for (let i = 0; i < maxPredictions; i++) {
                     const classPrediction =
                       prediction[i].className +
@@ -256,12 +255,15 @@
       {{#each feedback}}
       <div class="answered_question">
               <p class="the_answered_question">
-                Question 1 - Lorem ipsum dolor sit amet. Non ratione nobis non
-                cumque facere ut pariatur quasi.
+                {{this.question}}
               </p>
-              <p class="the_answered_question">Status - Correct/Incorrect</p>
+              <p class="the_answered_question">Status -{{this.state}}</p>
             </div>
       {{/each}}
+    </script>
+    <script type="text/x-template" class="scoreTemplate">
+      {{#each theScore}}
+       <h2 class="score_text">SCORE: 75%</h2>
     </script>
     <div
       class="modal fade"
@@ -278,17 +280,15 @@
             <div class="app_name">
               <h1>QUIZ GAME</h1>
             </div>
-            <div class="score_container">
-              <h2 class="score_text">SCORE: 75%</h2>
-            </div>
+            <div class="score_container"></div>
             <div class="feedback_choice">
-              <div class="answered_question">
+              <!-- <div class="answered_question">
                 <p class="the_answered_question">
                   Question 1 - Lorem ipsum dolor sit amet. Non ratione nobis non
                   cumque facere ut pariatur quasi.
                 </p>
                 <p class="the_answered_question">Status - Correct/Incorrect</p>
-              </div>
+              </div> -->
             </div>
             <div class="continue_quiz">
               <input
