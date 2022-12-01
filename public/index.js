@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   submitBtn.addEventListener("click", function () {
     let image = typeName.innerHTML;
     const answers = document.querySelectorAll(".option");
-    console.log(answers);
+
     // axios
     //   .post("/api/quiz/results", {
     //     answer1,
