@@ -86,13 +86,13 @@
             }
           });
 
-          //   for (let i = 0; i < maxPredictions; i++) {
-          //     const classPrediction =
-          //       prediction[i].className +
-          //       ": " +
-          //       prediction[i].probability.toFixed(2);
-          //     labelContainer.childNodes[i].innerHTML = classPrediction;
-          //   }
+          // for (let i = 0; i < maxPredictions; i++) {
+          //   const classPrediction =
+          //     prediction[i].className +
+          //     ": " +
+          //     prediction[i].probability.toFixed(2);
+          //   labelContainer.childNodes[i].innerHTML = classPrediction;
+          // }
         }
       </script>
     </div>
@@ -189,26 +189,25 @@
     <script type="text/x-template" class="questionTemplate">
       {{#each questions}}
       <div class="question">
-             <p class="the_question">
-              {{this.question}}
-             </p>
-            </div>
-
-       {{/each}}
-           {{#each question}}
-
-           <div class="choices">
-             <div class="round">
-               <input
-                 type="radio"
-                 class="question1"
+        <p class="the_question">
+          {{this.question}}
+        </p>
+      </div>
+      {{#each options}}
+      <div class="choices">
+              <div class="round">
+                <input
+                type="radio"
+                 class="option"
                  name="question"
                  value="Bike"
                />
-               <label for="vehicle1">{{this.option}}</label><br />
+               <label for="vehicle1">{{this}}</label><br />
              </div>
 
             </div>
+            {{/each}}
+
             {{/each}}
     </script>
     <div
