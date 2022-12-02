@@ -16,14 +16,7 @@ Getting enough fiber on a daily basis is essential for overall health
 and helps keep your digestive system healthy.
 Oranges are also high in certain nutrients, especially vitamin C and
 folate.');
-insert into images(image_name,image_description) values('Moringa','Moringa is an important food source in some parts of the world. It can
-be grown cheaply and easily, and retains much of its nutritional value
-when dried. As an antioxidant, it seems to help protect cells from
-damage.
-Moringa is used for asthma, diabetes, breast-feeding, and many other
-purposes.
-People taking medication should consult a doctor before taking
-moringa extract.');
+insert into images(image_name,image_description) values('Carrot','Carrots are biennials that grow in loose soil and in cooler climates. There are wild carrots and domesticated carrots, and the part that most people eat is the taproot. This vegetable contains carotene, which helps you stay healthy and sharp-sighted');
 insert into images(image_name,image_description) values('Muriwa','Green leafy vegetables are commonly served with any Sub-Saharan
 African meal. They are known as muriwo in Zimbabwe, morogo in
 Botswana, and sukuma wiki in Kenya.
@@ -44,10 +37,11 @@ insert into quiz(image_id,question,level) values(2,'Their origin is?',1);
 insert into quiz(image_id,question,level) values(2,'Oranges are a good source of fibre',1);
 insert into quiz(image_id,question,level) values(2,'Oranges are high in?',1);
 
-insert into quiz(image_id,question,level) values(3,'Moringa can be grown cheaply',1);
-insert into quiz(image_id,question,level) values(3,'To retain much of its nutrients Moringa should be?',1);
-insert into quiz(image_id,question,level) values(3,'Before taking Moringa one should consult a?',1);
-insert into quiz(image_id,question,level) values(3,'Moringa Is used for',1);
+
+insert into quiz(image_id,question,level) values(3,'Are carrots good for your eyes',2);
+insert into quiz(image_id,question,level) values(3,'Which diseases are associated with carrots benefit',2);
+insert into quiz(image_id,question,level) values(3,'Do carrots improve the skin health?',2);
+insert into quiz(image_id,question,level) values(3,'What type of a vegetable is a carrot',2);
 
 insert into quiz(image_id,question,level) values(4,'In Zimbabwe greeny leafy vegetables are know as?',1);
 insert into quiz(image_id,question,level) values(4,'Muriwo is served with?',1);
@@ -95,32 +89,32 @@ insert into options(question_id,option,status,score) values(8,'vitamin c','corre
 insert into options(question_id,option,status,score) values(8,'vitamin k','incorrect',0);
 insert into options(question_id,option,status,score) values(8,'oxygen','incorrect',0);
 
-insert into options(question_id,option,status,score) values(9,'true','correct',25);
-insert into options(question_id,option,status,score) values(9,'false','incorrect',0);
-insert into options(question_id,option,status,score) values(9,'not enough information provided','incorrect',0);
-insert into options(question_id,option,status,score) values(9,'they are expensive to grow','incorrect',0);
+insert into options(question_id,option,status,score) values(9,'Not sure','incorrect',0);
+insert into options(question_id,option,status,score) values(9,'Yes they have vitamin A','correct',25);
+insert into options(question_id,option,status,score) values(9,'Not all the time','incorrect',0);
+insert into options(question_id,option,status,score) values(9,'Could be','incorrect',0);
 
-insert into options(question_id,option,status,score) values(10,'boiled','incorrect',0);
-insert into options(question_id,option,status,score) values(10,'fried','incorrect',0);
-insert into options(question_id,option,status,score) values(10,'dried','correct',25);
-insert into options(question_id,option,status,score) values(10,'cooked','incorrect',0);
+insert into options(question_id,option,status,score) values(10,'Back pain','incorrect',0);
+insert into options(question_id,option,status,score) values(10,'reduces risk of flu','incorrect',0);
+insert into options(question_id,option,status,score) values(10,'help with stomach cramps','incorrect',0);
+insert into options(question_id,option,status,score) values(10,'reduces risk of cancer','correct',25);
 
-insert into options(question_id,option,status,score) values(11,'lawyer','incorrect',0);
-insert into options(question_id,option,status,score) values(11,'police','incorrect',0);
-insert into options(question_id,option,status,score) values(11,'mother','incorrect',0);
-insert into options(question_id,option,status,score) values(11,'doctor','correct',25);
+insert into options(question_id,option,status,score) values(11,'sufficient','correct',25);
+insert into options(question_id,option,status,score) values(11,'insufficient','incorrect',0);
+insert into options(question_id,option,status,score) values(11,'They make your skin oily','incorrect',0);
+insert into options(question_id,option,status,score) values(11,'i think so','incorrect',0);
 
-insert into options(question_id,option,status,score) values(12,'asthma and breast feeding','correct',25);
-insert into options(question_id,option,status,score) values(12,'not enough information','incorrect',0);
-insert into options(question_id,option,status,score) values(12,'it is used for HIV','incorrect',0);
-insert into options(question_id,option,status,score) values(12,'it is used for flu','incorrect',0);
+insert into options(question_id,option,status,score) values(12,'tuber','incorrect',0);
+insert into options(question_id,option,status,score) values(12,'seed','incorrect',0);
+insert into options(question_id,option,status,score) values(12,'root','correct',25);
+insert into options(question_id,option,status,score) values(12,'stem','incorrect',0);
 
 insert into options(question_id,option,status,score) values(13,'muriwo','correct',25);
 insert into options(question_id,option,status,score) values(13,'morogo','incorrect',0);
 insert into options(question_id,option,status,score) values(13,'spinach','incorrect',0);
 insert into options(question_id,option,status,score) values(13,'sukuma','incorrect',0);
 
-insert into options(question_id,option,status,score) values(14,'pizza','incorrect',0);
+insert into options(question_id,option,status,score) values(14,'pizza', 'incorrect',0);
 insert into options(question_id,option,status,score) values(14,'burger','incorrect',0);
 insert into options(question_id,option,status,score) values(14,'any sub-saharan african meal','correct',25);
 insert into options(question_id,option,status,score) values(14,'amasi','incorrect',0);
@@ -135,6 +129,44 @@ insert into options(question_id,option,status,score) values(16,'vitamin k','inco
 insert into options(question_id,option,status,score) values(16,'folic','incorrect',0);
 insert into options(question_id,option,status,score) values(16,'vitamin d','correct',25);
 
+
+
+insert into quiz(image_id,question,level) values(3,'What kind of carrots do people eat mostly',1);
+insert into quiz(image_id,question,level) values(3,'what do carrots contain',1);
+insert into quiz(image_id,question,level) values(3,'what ways can you buy carrot',1);
+insert into quiz(image_id,question,level) values(3,'which one of these was NOT a common carrot color when carrots originate',1);
+
+
+insert into options(question_id,option,status,score) values(17,'yellowish carrots','incorrect',0);
+
+insert into options(question_id,option,status,score) values(17,'taproot carrot','correct',25);
+
+insert into options(question_id,option,status,score) values(17,'root carrot','incorrect',0);
+insert into options(question_id,option,status,score) values(17,'sweet carrot','incorrect',0);
+
+insert into options(question_id,option,status,score) values(18,'zinc','incorrect',0);
+
+insert into options(question_id,option,status,score) values(18,'iron','incorrect',0);
+
+insert into options(question_id,option,status,score) values(18,'starch','incorrect',0);
+
+insert into options(question_id,option,status,score) values(18,'carotene','correct',25);
+
+insert into options(question_id,option,status,score) values(19,'canned','incorrect',0);
+
+insert into options(question_id,option,status,score) values(19,'frozen','incorrect',0);
+
+insert into options(question_id,option,status,score) values(19,'fresh','incorrect',0);
+
+insert into options(question_id,option,status,score) values(19,'all of the above','correct',25);
+
+insert into options(question_id,option,status,score) values(20,'yellow','incorrect',0);
+
+insert into options(question_id,option,status,score) values(20,'white','incorrect',0);
+
+insert into options(question_id,option,status,score) values(20,'green','correct',25);
+
+insert into options(question_id,option,status,score) values(20,'purple','incorrect',0);
 
 
 

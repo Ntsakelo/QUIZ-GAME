@@ -52,6 +52,9 @@
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >
+      <div class="app_name">
+        <h1>QUIZ GAME</h1>
+      </div>
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
           <div class="modal-body" id="quizQuest">
@@ -125,34 +128,23 @@
                     }
                   });
 
-                  for (let i = 0; i < maxPredictions; i++) {
-                    const classPrediction =
-                      prediction[i].className +
-                      ": " +
-                      prediction[i].probability.toFixed(2);
-                    labelContainer.childNodes[i].innerHTML = classPrediction;
-                  }
+                  // for (let i = 0; i < maxPredictions; i++) {
+                  //   const classPrediction =
+                  //     prediction[i].className +
+                  //     ": " +
+                  //     prediction[i].probability.toFixed(2);
+                  //   labelContainer.childNodes[i].innerHTML = classPrediction;
+                  // }
                 }
               </script>
             </div>
 
-            <div class="app_name">
-              <h1>QUIZ GAME</h1>
-            </div>
             <div class="image_description">
               <div class="desciption_type">
                 <h2>DESCRIPTION</h2>
                 <h4 class="typeName"></h4>
               </div>
-              <p class="description_paragraph">
-                Lorem ipsum dolor sit amet. Non ratione nobis non cumque facere
-                ut pariatur quasi. Ut sequi nobis ut rerum minus 33 optio
-                recusandae vel perferendis asperiores. Sed explicabo sunt et
-                odio praesentium rem rerum quas. In enim iste id cumque enim et
-                voluptas expedita est ducimus sint ad suscipit dolorum? Ab
-                accusantium asperiores ea enim esse qui minima rerum et expedita
-                omnis.
-              </p>
+              <p class="description_paragraph"></p>
             </div>
             <div class="start_camera">
               <input
@@ -179,6 +171,8 @@
                 name="quiz_button"
                 id=""
                 value="Start Quiz"
+                data-bs-dismiss="modal"
+                aria-label="Close"
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
               />
@@ -241,6 +235,8 @@
                 name="camera_button"
                 id=""
                 value="Submit Quiz"
+                data-bs-dismiss="modal"
+                aria-label="Close"
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop1"
               />
@@ -261,10 +257,11 @@
             </div>
       {{/each}}
     </script>
-    <script type="text/x-template" class="scoreTemplate">
+    <!-- <script type="text/x-template" class="scoreTemplate">
       {{#each theScore}}
-       <h2 class="score_text">SCORE: 75%</h2>
-    </script>
+
+       {{/each}}
+    </script> -->
     <div
       class="modal fade"
       id="staticBackdrop1"
@@ -280,16 +277,10 @@
             <div class="app_name">
               <h1>QUIZ GAME</h1>
             </div>
-            <div class="score_container"></div>
-            <div class="feedback_choice">
-              <!-- <div class="answered_question">
-                <p class="the_answered_question">
-                  Question 1 - Lorem ipsum dolor sit amet. Non ratione nobis non
-                  cumque facere ut pariatur quasi.
-                </p>
-                <p class="the_answered_question">Status - Correct/Incorrect</p>
-              </div> -->
+            <div class="score_container">
+              <h2 class="score_text"></h2>
             </div>
+            <div class="feedback_choice"></div>
             <div class="continue_quiz">
               <input
                 type="button"
@@ -297,6 +288,10 @@
                 name="continue"
                 id=""
                 value="Continue Quiz"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
               />
             </div>
             <div class="new_image">
@@ -306,6 +301,10 @@
                 name="new_image"
                 id=""
                 value="Use New Image"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop2"
               />
             </div>
           </div>

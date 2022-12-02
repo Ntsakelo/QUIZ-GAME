@@ -44,6 +44,16 @@ describe("test the waiters database function", function () {
       console.log(err);
     }
   });
+  it("should return all the questions and options for the image", async function () {
+    try {
+      const quizData = QuizData(db);
+      let questions = await quizData.getImageQuestions("Orange", 2);
+      console.log(questions);
+      // assert.equal(4, questions.length);
+    } catch (err) {
+      console.log(err);
+    }
+  });
   it("should be able to check for correct and incorrect answers", async function () {
     try {
       const quizData = QuizData(db);
@@ -55,7 +65,7 @@ describe("test the waiters database function", function () {
         "Ntsakelo",
         "Orange"
       );
-      console.log(results);
+      // console.log(results);
     } catch (err) {
       console.log(err);
     }

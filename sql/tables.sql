@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS options;
-DROP TABLE IF EXISTS answers;
+
 
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS quiz;
@@ -32,13 +32,6 @@ create table users(
     score int not null
 );
 
--- create table answers(
---     id serial primary key not null,
---     user_id int not null,
---     question_id int not null,
---     response text not null,
---     foreign key (user_id) references users(id) on delete cascade,
---     foreign key (question_id) references quiz(id) on delete cascade
--- );
+
 
 

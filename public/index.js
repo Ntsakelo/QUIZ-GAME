@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.querySelector(".submit_quiz");
   const resultsTemplate = document.querySelector(".resultsTemplate");
   const resultsDisplay = document.querySelector(".feedback_choice");
-
-  typeName.innerHTML = "";
+  const myScore = document.querySelector(".score_text");
+  const quizContinueBtn = document.querySelector(".continue_quiz");
+  const newImgBtn = document.querySelector(".new_image");
+  typeName.innerHTML = "Carrot";
   description.innerHTML = "";
   let user = "";
   showDescription.addEventListener("click", function () {
@@ -80,14 +82,51 @@ document.addEventListener("DOMContentLoaded", function () {
         let response = results.data;
         let data = response.data;
         let score = 0;
+        console.log(data);
         data.forEach((item) => {
           score += item.score;
         });
         template = Handlebars.compile(resultsTemplate.innerHTML);
         resultsDisplay.innerHTML = template({
           feedback: data,
-          theScore: score,
         });
+        myScore.innerHTML = `Score : ${score}%`;
       });
+  });
+  quizContinueBtn.addEventListener("click", function () {
+    axios.get(`/api/quiz/play/image/${typeName.innerHTML}`).then((results) => {
+      let response = results.data;
+      let data = response.data;
+
+      let template = Handlebars.compile(questionTemplate.innerHTML);
+      questionDisplay.innerHTML = template({
+        questions: data,
+      });
+      const option = document.querySelectorAll(".option");
+      option.forEach((item) => {
+        if (item.checked) {
+          item.checked = false;
+        }
+      });
+      let set = 0;
+      for (let i = 0; i < option.length; i++) {
+        if (i % 4 === 0) {
+          set++;
+        }
+        option[i].setAttribute("name", `${set}`);
+      }
+    });
+  });
+  newImgBtn.addEventListener("click", function () {
+    typeName.innerHTML = "";
+    description.innerHTML = "";
+    if (typeName.innerHTML !== "") {
+      let type = typeName.innerHTML;
+      axios.get(`/api/quiz/image/${typeName.innerHTML}`).then((results) => {
+        let response = results.data;
+        let data = response.data;
+        description.innerHTML = data.image_description;
+      });
+    }
   });
 });
