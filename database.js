@@ -88,6 +88,7 @@ export default function QuizData(db) {
           [item, result.id]
         );
         score += results.score;
+
         await db.none("update users set score = $1 where first_name = $2", [
           score,
           username,

@@ -22,6 +22,7 @@ African meal. They are known as muriwo in Zimbabwe, morogo in
 Botswana, and sukuma wiki in Kenya.
 Muriwo is an extremely nutrient-rich vegetable. It packs high amounts
 of carotenoids, vitamin C, vitamin K, folic acid, iron, and calcium.');
+insert into images(image_name,image_description) values('Not a Veg or Fruit','Not recognized as a fruit or vegetable');
 
 insert into quiz(image_id,question,level) values(1,'Tomatoes reduce the risk of?',1);
 

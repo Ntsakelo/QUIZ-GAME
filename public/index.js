@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const myScore = document.querySelector(".score_text");
   const quizContinueBtn = document.querySelector(".continue_quiz");
   const newImgBtn = document.querySelector(".new_image");
-  typeName.innerHTML = "Carrot";
+  const levelDisplay = document.querySelector(".timer_text");
+  typeName.innerHTML = "";
   description.innerHTML = "";
   let user = "";
   showDescription.addEventListener("click", function () {
@@ -37,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
     axios.get(`/api/quiz/play/image/${typeName.innerHTML}`).then((results) => {
       let response = results.data;
       let data = response.data;
+      let level = response.stage;
 
+      levelDisplay.innerHTML = `level ${level}`;
       let template = Handlebars.compile(questionTemplate.innerHTML);
       questionDisplay.innerHTML = template({
         questions: data,
@@ -97,7 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
     axios.get(`/api/quiz/play/image/${typeName.innerHTML}`).then((results) => {
       let response = results.data;
       let data = response.data;
+      let level = response.stage;
 
+      levelDisplay.innerHTML = `level ${level}`;
       let template = Handlebars.compile(questionTemplate.innerHTML);
       questionDisplay.innerHTML = template({
         questions: data,

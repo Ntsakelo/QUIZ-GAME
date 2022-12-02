@@ -37,6 +37,7 @@ export default function (QuizData) {
       res.json({
         status: "success",
         data: results,
+        stage: level,
       });
     } catch (err) {
       next(err);
